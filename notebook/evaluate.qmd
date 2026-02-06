@@ -1,0 +1,60 @@
+---
+title: "Evaluate"
+output: html_document
+---
+
+```{r}
+#| label: setup
+#| echo: false
+
+library(tidyverse)
+library(yardstick)
+library(ggview)
+```
+
+```{r}
+result <- read_csv("results/data/result_test1.csv")
+```
+
+```{r}
+my_metrics <- metric_set(roc_auc, pr_auc, accuracy, bal_accuracy, f_meas, sens, spec)
+
+eva_result <- result |>
+  mutate(pred = as.factor(pred), true = as.factor(true)) |>
+  group_by(feature_type) |>
+  my_metrics(truth = true, estimate = pred, prob, event_level = "second") |>
+  select(feature_type, metric = .metric, score = .estimate) |>
+  mutate(metric = case_match(
+    metric,
+    "roc_auc" ~ "ROC AUC",
+    "pr_auc" ~ "PR AUC",
+    "accuracy" ~ "Accuracy",
+    "bal_accuracy" ~ "Balanced Accuracy",
+    "f_meas" ~ "F1 Score",
+    "sens" ~ "Sensitivity",
+    "spec" ~ "Specificity",
+  ))
+```
+
+```{r}
+p <- eva_result |>
+  mutate(
+    feature_type = str_remove(feature_type, " \\(\\d+\\)"),
+    feature_type = factor(feature_type, levels = c("Only Peptides", "Only Clinics", "All Features")),
+  ) |>
+  ggplot(aes(score, metric, fill = feature_type)) +
+  geom_col(position = "dodge") +
+  geom_text(aes(label = scales::label_number(accuracy = 0.01)(score), color = ), position = position_dodge(width = 0.9), hjust = -0.1, size = 3) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0.2))) +
+  scale_fill_brewer(palette = "Oranges", name = "Feature Type") +
+  labs(y = NULL) +
+  theme_minimal() +
+  theme(
+    panel.grid = element_blank(),
+    axis.line.y = element_line(color = "black"),
+    axis.text.x = element_blank()
+  ) +
+  canvas(width = 6, height = 4)
+
+save_ggplot(p, "results/figures/evaluate.pdf")
+```

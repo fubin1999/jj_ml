@@ -1,0 +1,59 @@
+---
+title: "Benchmark"
+output: html_document
+---
+
+```{r}
+#| label: setup
+#| echo: false
+
+library(tidyverse)
+library(ggimage)
+
+res <- read_csv("results/data/benchmark.csv")
+```
+
+```{r}
+#| label: data-cleaning
+data <- res |>
+  mutate(
+    fs_method = str_extract(method, "(.*?)\\(n_opt=\\d+\\)\\+.*", group = 1),
+    algorithm = str_extract(method, ".*?\\(n_opt=\\d+\\)\\+(.*)", group = 1),
+    .after = method, .keep = "unused"
+  ) |>
+  mutate(fs_method = str_remove(fs_method, "_topn")) |>
+  select(-ends_with("folds")) |>
+  pivot_longer(-c(fs_method, algorithm), names_to = c("score_type", "stat"), names_pattern = "(.*)_(mean|sd)", values_to = "score") |>
+  pivot_wider(names_from = "stat", values_from = "score", names_prefix = "score_")
+```
+
+```{r}
+bench_p <- data |>
+  mutate(method = paste0(fs_method, "+", algorithm)) |>
+  mutate(score_type = case_match(
+    score_type,
+    "auc" ~ "ROC AUC",
+    "balanced_acc" ~ "Balanced Accuracy",
+    "f1" ~ "F1 Score",
+    "pr_auc" ~ "PR AUC",
+    "precision" ~ "Precision",
+    "recall" ~ "Recall",
+  )) |>
+  ggplot(aes(score_mean, reorder(method, score_mean))) +
+  geom_col(fill = "#FF8000") +
+  geom_text(aes(label = round(score_mean, 2)), hjust = -0.1, size = 3) +
+  geom_vline(xintercept = 0) +
+  facet_wrap(~score_type, nrow = 2) +
+  scale_x_continuous(
+    expand = expansion(mult = c(0, 0.2)),
+    labels = c("0.00", "0.25", "0.50", "0.75", "")
+    ) +
+  labs(
+    x = "Score (Mean of 5-fold cross-validation)",
+    y = "Feature Selection + Algorithm"
+  ) +
+  theme_minimal()
+
+ggpreview(plot = bench_p, width = 6, height = 8)
+ggsave("results/figures/benchmark.pdf", width = 6, height = 8)
+```
