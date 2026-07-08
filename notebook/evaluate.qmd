@@ -17,7 +17,8 @@ result1 <- read_csv("results/data/result_test1.csv") |>
   mutate(
     true = factor(true),
     pred = factor(pred),
-    feature_type = factor(feature_type, levels = c("Only Peptides", "Only Clinics", "All Features"))
+    feature_type = factor(feature_type, levels = c("Only Peptides", "Only Clinics", "All Features")),
+    sample_number = as.character(sample_number)
   )
 
 result2 <- read_csv("results/data/result_test2.csv") |>
