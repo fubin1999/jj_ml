@@ -75,8 +75,7 @@ with st.form("risk_calculator"):
             step=0.01,
             help=(
                 "Glycated peptide GEAFTLK(g)ATVLNYLPK from "
-                "alpha-2-macroglobulin (A2MG). Enter its peptide assay "
-                "result, not a routine serum A2MG concentration."
+                "alpha-2-macroglobulin (A2MG)."
             ),
         )
         apob = st.number_input(
