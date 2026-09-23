@@ -18,23 +18,51 @@ with st.form("risk_calculator"):
     clinical, peptides = st.columns(2)
     with clinical:
         st.markdown("#### Clinical indicators")
-        ktv = st.number_input("T Kt/v (unitless)", min_value=0.0, value=None, step=0.01)
-        diabetes = st.selectbox("Diabetes (Yes/No)", ["Select", "No", "Yes"])
+        ktv = st.number_input(
+            "T Kt/v (unitless)",
+            min_value=0.0,
+            value=None,
+            step=0.01,
+            help="Total Kt/V: total urea clearance index used to assess dialysis adequacy.",
+        )
+        diabetes = st.selectbox(
+            "Diabetes (Yes/No)",
+            ["Select", "No", "Yes"],
+            help="Whether the patient has diabetes. Yes = 1; No = 0.",
+        )
         ctnt = st.number_input(
-            "cTnT (ng/mL; provisional)",
+            "cTnT (ng/mL)",
             min_value=0.0,
             value=None,
             step=0.001,
             format="%.3f",
             help=(
-                "Unit inferred from the training values; confirm against the "
-                "original laboratory report. If the report says 74 ng/L, "
-                "enter 0.074 ng/mL."
+                "Cardiac troponin T, a blood marker of heart muscle injury. "
+                "If the report uses ng/L, divide by 1,000 before entering "
+                "(for example, 74 ng/L = 0.074 ng/mL)."
             ),
         )
-        ga = st.number_input("GA (%; provisional)", min_value=0.0, value=None, step=0.1)
-        alb = st.number_input("ALB (g/L; provisional)", min_value=0.0, value=None, step=0.1)
-        phosphorus = st.number_input("P (mmol/L; provisional)", min_value=0.0, value=None, step=0.01)
+        ga = st.number_input(
+            "GA (%)",
+            min_value=0.0,
+            value=None,
+            step=0.1,
+            help="Glycated albumin: the percentage of serum albumin with glucose attached.",
+        )
+        alb = st.number_input(
+            "ALB (g/L)",
+            min_value=0.0,
+            value=None,
+            step=0.1,
+            help="Serum albumin concentration, measured by the clinical laboratory.",
+        )
+        phosphorus = st.number_input(
+            "P (mmol/L)",
+            min_value=0.0,
+            value=None,
+            step=0.01,
+            help="Serum phosphate (phosphorus) concentration.",
+        )
     with peptides:
         st.markdown("#### Glycated peptide biomarkers")
         a2mg = st.number_input(
@@ -43,8 +71,8 @@ with st.form("risk_calculator"):
             value=None,
             step=0.01,
             help=(
-                "Peptide 156 in the source workbook. Enter the original peptide "
-                "assay result in pg/µL, not a routine serum A2MG concentration."
+                "Peptide 156 from alpha-2-macroglobulin. Enter its peptide assay "
+                "result, not a routine serum A2MG concentration."
             ),
         )
         apob = st.number_input(
@@ -53,8 +81,8 @@ with st.form("risk_calculator"):
             value=None,
             step=0.01,
             help=(
-                "Peptide 157 in the source workbook. Enter the original peptide "
-                "assay result in pg/µL, not a routine serum APOB concentration."
+                "Peptide 157 from apolipoprotein B. Enter its peptide assay "
+                "result, not a routine serum APOB concentration."
             ),
         )
 
@@ -79,12 +107,6 @@ if submitted:
         st.metric("Model-predicted probability of Endpoint = 1", f"{probability:.1%}")
         st.caption(f"Unrounded model probability: {probability:.6f}")
 
-st.info(
-    "The original workbooks do not record measurement units. Clinical units shown "
-    "as provisional are inferred from the data scale; confirm them with the "
-    "source laboratory before entering results. A2MG and APOB use the "
-    "project-supplied unit pg/µL; use values from the original peptide assay."
-)
 st.caption(
     "Research use only. This model output has not been established as a "
     "calibrated absolute clinical risk; it should not be used alone for care decisions."

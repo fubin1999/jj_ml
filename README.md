@@ -20,22 +20,18 @@ The original modeling pipeline's mean imputation remains available in
 
 ## Input units
 
-| Input | Unit shown in the app | Source status |
-|---|---|---|
-| T Kt/v | Unitless | Ratio |
-| Diabetes | Yes / No | Original workbook defines 1 / 0 |
-| cTnT | ng/mL | Provisional; inferred from the training values |
-| GA | % | Provisional; inferred from the training values |
-| ALB | g/L | Provisional; inferred from the training values |
-| P | mmol/L | Provisional; inferred from the training values |
-| A2MG, APOB | pg/µL | Supplied for this project; absent from the source workbooks |
+| Input | Unit shown in the app |
+|---|---|
+| T Kt/v | Unitless |
+| Diabetes | Yes / No (0 / 1) |
+| cTnT | ng/mL |
+| GA | % |
+| ALB | g/L |
+| P | mmol/L |
+| A2MG, APOB | pg/µL |
 
-The clinical units are consistent with common laboratory reporting conventions,
-but the source workbooks do not record them. Confirm units against the original
-laboratory reports before using new measurements. A2MG and APOB are peptide
-assay outputs (peptides 156 and 157 in the workbook dictionary), not routine
-serum protein concentrations. Their pg/µL unit was supplied separately and is
-not recorded in the source workbooks.
+A2MG and APOB refer to the peptide assay outputs (peptides 156 and 157 in the
+workbook dictionary), not routine serum protein concentrations.
 
 The displayed number is the original model's probability output, not a
 clinically calibrated absolute risk estimate. The interface is for research
