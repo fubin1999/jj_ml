@@ -15,7 +15,6 @@ st.subheader(
     "1-Year CVD Risk Calculator for PD Patients Integrating Clinical "
     "Indicators and Glycated Peptide Biomarkers"
 )
-st.write("Enter measurements using the same scale and definitions as the training data.")
 
 with st.form("risk_calculator"):
     clinical, peptides = st.columns(2)
