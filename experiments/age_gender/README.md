@@ -28,3 +28,5 @@
 - `metrics.csv`：两种模型的各项指标。
 - `delta.csv`：增量模型减原模型的指标差。
 - `selected_clinical_features.csv`：训练集选出的临床变量。
+- `plot_roc.py`：根据逐例预测绘制两个留出测试集的 ROC 曲线；运行 `python experiments/age_gender/plot_roc.py`。
+- `roc_comparison.pdf`、`roc_comparison.png`：原模型与加入年龄、性别模型的 ROC 对比图。
