@@ -4,7 +4,7 @@ Streamlit interface for the **All Features** logistic regression model in
 `notebook/modeling.ipynb`. It takes the six selected clinical indicators and
 two glycated peptide biomarkers as raw measurements and displays the model's
 predicted probability for `Endpoint = 1`. The adjacent **Unlikely / Likely**
-label follows the model's default 50% classification cutoff, not a validated
+label follows the 37.3% Youden cutoff, not a validated
 clinical risk category.
 
 ## Run locally
@@ -32,8 +32,10 @@ The original modeling pipeline's mean imputation remains available in
 | P | mmol/L |
 | A2MG, APOB | pg/µL |
 
-A2MG and APOB refer to the peptide assay outputs (peptides 156 and 157 in the
-workbook dictionary), not routine serum protein concentrations.
+A2MG refers to glycated peptide GEAFTLK(g)ATVLNYLPK from
+alpha-2-macroglobulin. APOB refers to glycated peptide K(g)QHLFVK from
+apolipoprotein B-100. Use peptide assay outputs, not routine serum protein
+concentrations.
 
 The displayed number is the original model's probability output, not a
 clinically calibrated absolute risk estimate. The interface is for research

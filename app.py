@@ -5,6 +5,9 @@ import streamlit as st
 from risk_model import predict_probability
 
 
+YOUDEN_CUTOFF = 0.373
+
+
 st.set_page_config(page_title="GlycaPep-PD CVD Risk Calculator", page_icon="🫀")
 
 st.title("GlycaPep-PD CVD Risk Calculator")
@@ -71,7 +74,8 @@ with st.form("risk_calculator"):
             value=None,
             step=0.01,
             help=(
-                "Peptide 156 from alpha-2-macroglobulin. Enter its peptide assay "
+                "Glycated peptide GEAFTLK(g)ATVLNYLPK from "
+                "alpha-2-macroglobulin (A2MG). Enter its peptide assay "
                 "result, not a routine serum A2MG concentration."
             ),
         )
@@ -81,7 +85,8 @@ with st.form("risk_calculator"):
             value=None,
             step=0.01,
             help=(
-                "Peptide 157 from apolipoprotein B. Enter its peptide assay "
+                "Glycated peptide K(g)QHLFVK from "
+                "apolipoprotein B-100 (APOB). Enter its peptide assay "
                 "result, not a routine serum APOB concentration."
             ),
         )
@@ -104,14 +109,14 @@ if submitted:
         st.error("Enter all eight measurements before calculating: " + ", ".join(missing))
     else:
         probability = predict_probability(values)
-        classification = "Likely" if probability > 0.5 else "Unlikely"
+        classification = "Likely" if probability >= YOUDEN_CUTOFF else "Unlikely"
         st.metric(
             "Model-predicted probability of Endpoint = 1",
             f"{probability:.1%} · {classification}",
         )
         st.caption(
             f"Unrounded model probability: {probability:.6f}. "
-            "The word follows the model's 50% classification cutoff, "
+            "The word follows the 37.3% Youden cutoff, "
             "not a clinical risk category."
         )
 
