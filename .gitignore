@@ -4,3 +4,4 @@ renv
 results
 .Rhistory
 .Rprofile
+__pycache__/
