@@ -104,8 +104,16 @@ if submitted:
         st.error("Enter all eight measurements before calculating: " + ", ".join(missing))
     else:
         probability = predict_probability(values)
-        st.metric("Model-predicted probability of Endpoint = 1", f"{probability:.1%}")
-        st.caption(f"Unrounded model probability: {probability:.6f}")
+        classification = "Likely" if probability > 0.5 else "Unlikely"
+        st.metric(
+            "Model-predicted probability of Endpoint = 1",
+            f"{probability:.1%} · {classification}",
+        )
+        st.caption(
+            f"Unrounded model probability: {probability:.6f}. "
+            "The word follows the model's 50% classification cutoff, "
+            "not a clinical risk category."
+        )
 
 st.caption(
     "Research use only. This model output has not been established as a "

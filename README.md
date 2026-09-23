@@ -3,7 +3,9 @@
 Streamlit interface for the **All Features** logistic regression model in
 `notebook/modeling.ipynb`. It takes the six selected clinical indicators and
 two glycated peptide biomarkers as raw measurements and displays the model's
-predicted probability for `Endpoint = 1`.
+predicted probability for `Endpoint = 1`. The adjacent **Unlikely / Likely**
+label follows the model's default 50% classification cutoff, not a validated
+clinical risk category.
 
 ## Run locally
 
