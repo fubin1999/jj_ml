@@ -12,22 +12,51 @@ st.subheader(
     "1-Year CVD Risk Calculator for PD Patients Integrating Clinical "
     "Indicators and Glycated Peptide Biomarkers"
 )
-st.write("Enter measurements using the same units and definitions as the training data.")
+st.write("Enter measurements using the same scale and definitions as the training data.")
 
 with st.form("risk_calculator"):
     clinical, peptides = st.columns(2)
     with clinical:
         st.markdown("#### Clinical indicators")
-        ktv = st.number_input("T Kt/v", min_value=0.0, value=None, step=0.01)
-        diabetes = st.selectbox("Diabetes", ["Select", "No", "Yes"])
-        ctnt = st.number_input("cTnT", min_value=0.0, value=None, step=0.001, format="%.3f")
-        ga = st.number_input("GA", min_value=0.0, value=None, step=0.1)
-        alb = st.number_input("ALB", min_value=0.0, value=None, step=0.1)
-        phosphorus = st.number_input("P", min_value=0.0, value=None, step=0.01)
+        ktv = st.number_input("T Kt/v (unitless)", min_value=0.0, value=None, step=0.01)
+        diabetes = st.selectbox("Diabetes (Yes/No)", ["Select", "No", "Yes"])
+        ctnt = st.number_input(
+            "cTnT (ng/mL; provisional)",
+            min_value=0.0,
+            value=None,
+            step=0.001,
+            format="%.3f",
+            help=(
+                "Unit inferred from the training values; confirm against the "
+                "original laboratory report. If the report says 74 ng/L, "
+                "enter 0.074 ng/mL."
+            ),
+        )
+        ga = st.number_input("GA (%; provisional)", min_value=0.0, value=None, step=0.1)
+        alb = st.number_input("ALB (g/L; provisional)", min_value=0.0, value=None, step=0.1)
+        phosphorus = st.number_input("P (mmol/L; provisional)", min_value=0.0, value=None, step=0.01)
     with peptides:
         st.markdown("#### Glycated peptide biomarkers")
-        a2mg = st.number_input("A2MG", min_value=0.0, value=None, step=0.01)
-        apob = st.number_input("APOB", min_value=0.0, value=None, step=0.01)
+        a2mg = st.number_input(
+            "A2MG (pg/µL)",
+            min_value=0.0,
+            value=None,
+            step=0.01,
+            help=(
+                "Peptide 156 in the source workbook. Enter the original peptide "
+                "assay result in pg/µL, not a routine serum A2MG concentration."
+            ),
+        )
+        apob = st.number_input(
+            "APOB (pg/µL)",
+            min_value=0.0,
+            value=None,
+            step=0.01,
+            help=(
+                "Peptide 157 in the source workbook. Enter the original peptide "
+                "assay result in pg/µL, not a routine serum APOB concentration."
+            ),
+        )
 
     submitted = st.form_submit_button("Calculate risk", type="primary")
 
@@ -50,6 +79,12 @@ if submitted:
         st.metric("Model-predicted probability of Endpoint = 1", f"{probability:.1%}")
         st.caption(f"Unrounded model probability: {probability:.6f}")
 
+st.info(
+    "The original workbooks do not record measurement units. Clinical units shown "
+    "as provisional are inferred from the data scale; confirm them with the "
+    "source laboratory before entering results. A2MG and APOB use the "
+    "project-supplied unit pg/µL; use values from the original peptide assay."
+)
 st.caption(
     "Research use only. This model output has not been established as a "
     "calibrated absolute clinical risk; it should not be used alone for care decisions."
