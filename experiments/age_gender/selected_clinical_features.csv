@@ -1,0 +1,13 @@
+model,feature
+Original all features,T Kt/v
+Original all features,Diabetes
+Original all features,cTnT
+Original all features,GA
+Original all features,ALB
+Original all features,P
++ Age and Gender,T Kt/v
++ Age and Gender,Diabetes
++ Age and Gender,cTnT
++ Age and Gender,GA
++ Age and Gender,ALB
++ Age and Gender,P

@@ -1,0 +1,349 @@
+cohort,sample_number,model,true,pred,prob
+test1_single_center,2166,Original all features,0,0,0.17843764591873912
+test1_single_center,2432,Original all features,1,1,0.6394918992910564
+test1_single_center,2260,Original all features,0,0,0.4602407380079021
+test1_single_center,2353,Original all features,1,1,0.6796071794186914
+test1_single_center,1866,Original all features,0,0,0.2027765177865693
+test1_single_center,2261,Original all features,0,0,0.3060757898254715
+test1_single_center,2066,Original all features,0,0,0.2071462517711031
+test1_single_center,2195,Original all features,0,0,0.18153108704451557
+test1_single_center,1901,Original all features,0,0,0.11670121506768803
+test1_single_center,2120,Original all features,0,0,0.28905700424554825
+test1_single_center,1546,Original all features,1,0,0.21767447569412873
+test1_single_center,2062,Original all features,0,1,0.7071251826109193
+test1_single_center,2137,Original all features,0,0,0.191707827830147
+test1_single_center,2289,Original all features,0,0,0.09644316651999205
+test1_single_center,2134,Original all features,0,0,0.29241655268950617
+test1_single_center,2249,Original all features,0,0,0.16204950752382852
+test1_single_center,2131,Original all features,0,0,0.36523800156413233
+test1_single_center,2149,Original all features,0,0,0.3316463656149692
+test1_single_center,1899,Original all features,0,1,0.5608400621972705
+test1_single_center,2125,Original all features,0,0,0.12734815248498113
+test1_single_center,2278,Original all features,0,0,0.054486889648539996
+test1_single_center,2139,Original all features,0,0,0.17728647073847129
+test1_single_center,1998,Original all features,0,1,0.5117445345105097
+test1_single_center,2036,Original all features,1,1,0.7261398632944341
+test1_single_center,2387,Original all features,1,1,0.8974746288612655
+test1_single_center,2247,Original all features,0,1,0.8872297820717138
+test1_single_center,2298,Original all features,0,1,0.521972163524169
+test1_single_center,1864,Original all features,1,0,0.3464657920526371
+test1_single_center,2209,Original all features,0,0,0.2048838361181226
+test1_single_center,2207,Original all features,0,0,0.4711603496981669
+test1_single_center,2175,Original all features,1,0,0.19460610541454992
+test1_single_center,2254,Original all features,0,0,0.07659909921526122
+test1_single_center,2242,Original all features,0,1,0.5547597937996304
+test1_single_center,2185,Original all features,0,1,0.5978708015843053
+test1_single_center,2157,Original all features,0,0,0.2846239554055609
+test1_single_center,2218,Original all features,1,1,0.6990828249969452
+test1_single_center,1895,Original all features,1,1,0.8595818560440998
+test1_single_center,1991,Original all features,0,1,0.5985780147830916
+test1_single_center,2132,Original all features,0,0,0.42368608199055857
+test1_single_center,2074,Original all features,0,0,0.10367771887256683
+test1_single_center,2172,Original all features,0,0,0.35849175238628633
+test1_single_center,2052,Original all features,0,0,0.12298443549069227
+test1_single_center,2051,Original all features,1,1,0.7814626131860782
+test1_single_center,1950,Original all features,0,0,0.1594987741682727
+test1_single_center,1982,Original all features,1,1,0.5510764183496729
+test1_single_center,2043,Original all features,0,1,0.9060202172949549
+test1_single_center,2256,Original all features,0,0,0.427238149197531
+test1_single_center,2206,Original all features,0,0,0.24499715392713586
+test1_single_center,2098,Original all features,0,0,0.1954420122630958
+test1_single_center,2093,Original all features,0,0,0.456362568738019
+test1_single_center,2042,Original all features,0,0,0.36344380091321254
+test1_single_center,1932,Original all features,0,1,0.5553837822094854
+test1_single_center,2276,Original all features,0,0,0.04764032534647726
+test1_single_center,2057,Original all features,0,0,0.2779407343254829
+test1_single_center,1939,Original all features,0,0,0.2702827903278342
+test1_single_center,1941,Original all features,1,1,0.6194908582886539
+test1_single_center,2283,Original all features,0,0,0.07708783798899993
+test1_single_center,2294,Original all features,0,0,0.45868039733967253
+test1_single_center,2264,Original all features,1,1,0.7428367280765305
+test1_single_center,2222,Original all features,1,0,0.36692532455785937
+test1_single_center,2035,Original all features,0,1,0.6484817147646945
+test1_single_center,2227,Original all features,1,1,0.5659062785995476
+test1_single_center,1501,Original all features,1,1,0.6146828961216724
+test1_single_center,2154,Original all features,0,1,0.7050200971275173
+test1_single_center,2094,Original all features,0,0,0.2435481810048488
+test1_single_center,2213,Original all features,0,1,0.7763174556789698
+test1_single_center,1951,Original all features,0,0,0.27863956162311276
+test1_single_center,2067,Original all features,0,1,0.7406588221494372
+test1_single_center,1946,Original all features,0,1,0.654159943828879
+test1_single_center,2164,Original all features,0,0,0.15645344839609582
+test1_single_center,2240,Original all features,0,1,0.5627846675947812
+test1_single_center,2288,Original all features,0,0,0.36324038751651716
+test2_multi_center,Z1,Original all features,0,0,0.31183177075873303
+test2_multi_center,Z2,Original all features,0,0,0.21419023469665868
+test2_multi_center,Z3,Original all features,1,1,0.5698885230889347
+test2_multi_center,Z4,Original all features,0,0,0.25225119208728486
+test2_multi_center,Z5,Original all features,0,0,0.17601379221500132
+test2_multi_center,Z6,Original all features,0,0,0.07545244653016434
+test2_multi_center,Z7,Original all features,0,0,0.23837607201968203
+test2_multi_center,Z8,Original all features,0,0,0.3964678276966333
+test2_multi_center,Z9,Original all features,0,0,0.3442210801990573
+test2_multi_center,Z10,Original all features,1,1,0.7567138391935734
+test2_multi_center,Z11,Original all features,0,0,0.31106485211896423
+test2_multi_center,Z12,Original all features,0,0,0.139607094581842
+test2_multi_center,Z13,Original all features,0,0,0.428284961625674
+test2_multi_center,Z14,Original all features,0,0,0.0948217162788871
+test2_multi_center,Z16,Original all features,0,0,0.41125835410925865
+test2_multi_center,Z17,Original all features,0,0,0.17802169687252548
+test2_multi_center,Z18,Original all features,0,0,0.191882522432832
+test2_multi_center,Z19,Original all features,0,0,0.04334764721415906
+test2_multi_center,Z20,Original all features,0,0,0.19189087484620784
+test2_multi_center,Z21,Original all features,0,0,0.24948703931970023
+test2_multi_center,Z22,Original all features,0,0,0.1978388760367438
+test2_multi_center,Z23,Original all features,0,1,0.5521353122953117
+test2_multi_center,Z24,Original all features,0,0,0.36031987523006515
+test2_multi_center,Z25,Original all features,0,0,0.11347194279675783
+test2_multi_center,Z26,Original all features,0,0,0.09355196316115766
+test2_multi_center,Z27,Original all features,1,1,0.7868704132072651
+test2_multi_center,Z29,Original all features,1,0,0.307518900577071
+test2_multi_center,Z30,Original all features,0,0,0.2721662107567202
+test2_multi_center,Z31,Original all features,0,0,0.3415510783132143
+test2_multi_center,Z33,Original all features,0,0,0.318004851720134
+test2_multi_center,Z34,Original all features,0,0,0.10692116712108114
+test2_multi_center,Z35,Original all features,0,0,0.29108592368694036
+test2_multi_center,Z36,Original all features,0,0,0.06877596229592163
+test2_multi_center,Z37,Original all features,0,0,0.23204035230329265
+test2_multi_center,Z38,Original all features,0,0,0.13253361269865652
+test2_multi_center,Z39,Original all features,0,0,0.3308954305409887
+test2_multi_center,Z40,Original all features,0,0,0.16504353963469834
+test2_multi_center,Z41,Original all features,0,0,0.2243281801032775
+test2_multi_center,Z42,Original all features,0,0,0.19560188822542438
+test2_multi_center,Z43,Original all features,0,0,0.0629237684711254
+test2_multi_center,Z44,Original all features,0,0,0.15293582358464258
+test2_multi_center,Z45,Original all features,1,0,0.35243626409134016
+test2_multi_center,Z46,Original all features,0,0,0.17847049478657576
+test2_multi_center,Z47,Original all features,0,0,0.22635413888005312
+test2_multi_center,Z48,Original all features,1,1,0.5095411180643613
+test2_multi_center,Z49,Original all features,0,0,0.08033933504082574
+test2_multi_center,Z50,Original all features,0,0,0.1688893485006926
+test2_multi_center,M1,Original all features,0,0,0.27100926324267316
+test2_multi_center,M2,Original all features,0,0,0.1867380036716552
+test2_multi_center,M4,Original all features,1,1,0.6407464374142446
+test2_multi_center,M5,Original all features,0,0,0.09520034355337854
+test2_multi_center,M6,Original all features,0,1,0.6325243518989287
+test2_multi_center,M7,Original all features,0,0,0.2077616178672604
+test2_multi_center,M8,Original all features,0,1,0.5254432642200426
+test2_multi_center,M9,Original all features,1,0,0.4457483155099117
+test2_multi_center,M10,Original all features,0,0,0.16538966930942195
+test2_multi_center,M11,Original all features,0,0,0.13301377196257783
+test2_multi_center,M12,Original all features,0,1,0.7257625868380005
+test2_multi_center,M13,Original all features,0,0,0.3299054952295239
+test2_multi_center,M14,Original all features,0,1,0.7767229427141702
+test2_multi_center,M15,Original all features,0,0,0.4385847810627423
+test2_multi_center,M16,Original all features,0,0,0.30088539693977784
+test2_multi_center,M19,Original all features,0,0,0.20074666107793016
+test2_multi_center,M20,Original all features,0,1,0.5435590745626888
+test2_multi_center,M21,Original all features,0,0,0.4269568841833541
+test2_multi_center,M23,Original all features,0,0,0.46443627496345924
+test2_multi_center,M24,Original all features,0,0,0.22239133488055704
+test2_multi_center,M25,Original all features,0,0,0.09972022161974399
+test2_multi_center,M26,Original all features,0,0,0.28343244280194363
+test2_multi_center,M27,Original all features,0,0,0.11455459503228825
+test2_multi_center,M29,Original all features,1,0,0.20511011782174982
+test2_multi_center,M30,Original all features,1,0,0.2838799466367685
+test2_multi_center,M31,Original all features,0,1,0.694490789983191
+test2_multi_center,M32,Original all features,0,1,0.5337441640825512
+test2_multi_center,M33,Original all features,1,1,0.9997235690689666
+test2_multi_center,M34,Original all features,0,0,0.2032972142186787
+test2_multi_center,M35,Original all features,1,1,0.6617854240007652
+test2_multi_center,M36,Original all features,1,1,0.9522897582537313
+test2_multi_center,M38,Original all features,0,0,0.3309065582183603
+test2_multi_center,M39,Original all features,0,0,0.28193795870381166
+test2_multi_center,M40,Original all features,0,0,0.30044805421468207
+test2_multi_center,M41,Original all features,0,0,0.3563922941336718
+test2_multi_center,M44,Original all features,0,0,0.09067543122120802
+test2_multi_center,M45,Original all features,1,0,0.48747915896261745
+test2_multi_center,M46,Original all features,0,1,0.5686523858800888
+test2_multi_center,M47,Original all features,0,0,0.22622183510609276
+test2_multi_center,M48,Original all features,0,0,0.48256411793211357
+test2_multi_center,M49,Original all features,1,0,0.4198686116531412
+test2_multi_center,M50,Original all features,0,0,0.2495341426055255
+test2_multi_center,M51,Original all features,0,0,0.36337843293591626
+test2_multi_center,M52,Original all features,1,1,0.7397307006881325
+test2_multi_center,M53,Original all features,0,0,0.3255201207246875
+test2_multi_center,M54,Original all features,0,1,0.6419593425744846
+test2_multi_center,M55,Original all features,0,0,0.2914410670626929
+test2_multi_center,W1,Original all features,0,0,0.36041649405638787
+test2_multi_center,W2,Original all features,0,0,0.2071318257938039
+test2_multi_center,W3,Original all features,0,0,0.31133715944883406
+test2_multi_center,W4,Original all features,1,0,0.2614185310174773
+test2_multi_center,W6,Original all features,0,0,0.2707357675994604
+test2_multi_center,W8,Original all features,0,1,0.640272181268179
+test2_multi_center,W9,Original all features,0,0,0.4658680330546185
+test2_multi_center,W11,Original all features,0,0,0.15210862080543988
+test1_single_center,2166,+ Age and Gender,0,0,0.39369996877152347
+test1_single_center,2432,+ Age and Gender,1,1,0.5182245645781235
+test1_single_center,2260,+ Age and Gender,0,1,0.515427147696302
+test1_single_center,2353,+ Age and Gender,1,0,0.4520386454893518
+test1_single_center,1866,+ Age and Gender,0,0,0.37174160972073444
+test1_single_center,2261,+ Age and Gender,0,0,0.48353060940724085
+test1_single_center,2066,+ Age and Gender,0,0,0.45567410510100675
+test1_single_center,2195,+ Age and Gender,0,0,0.3631548708959915
+test1_single_center,1901,+ Age and Gender,0,0,0.3653680515667638
+test1_single_center,2120,+ Age and Gender,0,0,0.39262534987712916
+test1_single_center,1546,+ Age and Gender,1,0,0.3657744205271041
+test1_single_center,2062,+ Age and Gender,0,1,0.5404663648740865
+test1_single_center,2137,+ Age and Gender,0,0,0.3736159692689722
+test1_single_center,2289,+ Age and Gender,0,0,0.4159025153178983
+test1_single_center,2134,+ Age and Gender,0,0,0.41939074292676287
+test1_single_center,2249,+ Age and Gender,0,0,0.35768386699983684
+test1_single_center,2131,+ Age and Gender,0,0,0.4590779031254381
+test1_single_center,2149,+ Age and Gender,0,0,0.4060056139664608
+test1_single_center,1899,+ Age and Gender,0,1,0.5192874297207247
+test1_single_center,2125,+ Age and Gender,0,0,0.44095699335369476
+test1_single_center,2278,+ Age and Gender,0,0,0.32900038538957926
+test1_single_center,2139,+ Age and Gender,0,0,0.37100463011152673
+test1_single_center,1998,+ Age and Gender,0,0,0.49179117647149967
+test1_single_center,2036,+ Age and Gender,1,1,0.5583737159082137
+test1_single_center,2387,+ Age and Gender,1,1,0.6764707451820215
+test1_single_center,2247,+ Age and Gender,0,1,0.6331482111421538
+test1_single_center,2298,+ Age and Gender,0,1,0.5476550301621221
+test1_single_center,1864,+ Age and Gender,1,0,0.44419323464916416
+test1_single_center,2209,+ Age and Gender,0,0,0.37935196109400865
+test1_single_center,2207,+ Age and Gender,0,1,0.5133147461586651
+test1_single_center,2175,+ Age and Gender,1,0,0.43042595065767697
+test1_single_center,2254,+ Age and Gender,0,0,0.39556875803036645
+test1_single_center,2242,+ Age and Gender,0,1,0.5378577155587053
+test1_single_center,2185,+ Age and Gender,0,1,0.5561752848799829
+test1_single_center,2157,+ Age and Gender,0,0,0.42211230140555933
+test1_single_center,2218,+ Age and Gender,1,1,0.5906125667688416
+test1_single_center,1895,+ Age and Gender,1,1,0.6046747570162659
+test1_single_center,1991,+ Age and Gender,0,0,0.45687014516578867
+test1_single_center,2132,+ Age and Gender,0,0,0.4707853749722346
+test1_single_center,2074,+ Age and Gender,0,0,0.36074561271967187
+test1_single_center,2172,+ Age and Gender,0,0,0.44816043408923034
+test1_single_center,2052,+ Age and Gender,0,0,0.38647216979263377
+test1_single_center,2051,+ Age and Gender,1,1,0.6360066192485588
+test1_single_center,1950,+ Age and Gender,0,0,0.4191516847543208
+test1_single_center,1982,+ Age and Gender,1,0,0.4717531490192741
+test1_single_center,2043,+ Age and Gender,0,1,0.6820225100710762
+test1_single_center,2256,+ Age and Gender,0,0,0.49421929220130195
+test1_single_center,2206,+ Age and Gender,0,0,0.43674908390660744
+test1_single_center,2098,+ Age and Gender,0,0,0.38277071494419657
+test1_single_center,2093,+ Age and Gender,0,0,0.49296105436346105
+test1_single_center,2042,+ Age and Gender,0,0,0.4496201286519956
+test1_single_center,1932,+ Age and Gender,0,0,0.4985068884616435
+test1_single_center,2276,+ Age and Gender,0,0,0.326167440786003
+test1_single_center,2057,+ Age and Gender,0,0,0.3900889225741215
+test1_single_center,1939,+ Age and Gender,0,0,0.4058452891302392
+test1_single_center,1941,+ Age and Gender,1,0,0.4906756594947893
+test1_single_center,2283,+ Age and Gender,0,0,0.35629442431415903
+test1_single_center,2294,+ Age and Gender,0,1,0.5126104854225184
+test1_single_center,2264,+ Age and Gender,1,1,0.583942729217609
+test1_single_center,2222,+ Age and Gender,1,0,0.46686371709428237
+test1_single_center,2035,+ Age and Gender,0,1,0.5223449501358667
+test1_single_center,2227,+ Age and Gender,1,1,0.5653954641737745
+test1_single_center,1501,+ Age and Gender,1,1,0.5982194096409179
+test1_single_center,2154,+ Age and Gender,0,1,0.5571583528186898
+test1_single_center,2094,+ Age and Gender,0,0,0.4695687968009836
+test1_single_center,2213,+ Age and Gender,0,1,0.5853014287134699
+test1_single_center,1951,+ Age and Gender,0,0,0.3893798091260485
+test1_single_center,2067,+ Age and Gender,0,1,0.6080640250884626
+test1_single_center,1946,+ Age and Gender,0,1,0.5628988671785159
+test1_single_center,2164,+ Age and Gender,0,0,0.3542197986204071
+test1_single_center,2240,+ Age and Gender,0,1,0.5063964126148939
+test1_single_center,2288,+ Age and Gender,0,0,0.4773871105362011
+test2_multi_center,Z1,+ Age and Gender,0,0,0.4334894129505319
+test2_multi_center,Z2,+ Age and Gender,0,0,0.39896327175618623
+test2_multi_center,Z3,+ Age and Gender,1,1,0.5206446963281685
+test2_multi_center,Z4,+ Age and Gender,0,0,0.43346368603356394
+test2_multi_center,Z5,+ Age and Gender,0,0,0.3627020162382851
+test2_multi_center,Z6,+ Age and Gender,0,0,0.3654270875719311
+test2_multi_center,Z7,+ Age and Gender,0,0,0.44156872346655
+test2_multi_center,Z8,+ Age and Gender,0,0,0.4775722907183037
+test2_multi_center,Z9,+ Age and Gender,0,0,0.44427738378274245
+test2_multi_center,Z10,+ Age and Gender,1,1,0.5687167730809427
+test2_multi_center,Z11,+ Age and Gender,0,0,0.4580466307298258
+test2_multi_center,Z12,+ Age and Gender,0,0,0.42805884016331497
+test2_multi_center,Z13,+ Age and Gender,0,0,0.4793522022860592
+test2_multi_center,Z14,+ Age and Gender,0,0,0.386114708551309
+test2_multi_center,Z16,+ Age and Gender,0,0,0.4715601466904714
+test2_multi_center,Z17,+ Age and Gender,0,0,0.38222939043001913
+test2_multi_center,Z18,+ Age and Gender,0,0,0.4189891679368755
+test2_multi_center,Z19,+ Age and Gender,0,0,0.3452773970449812
+test2_multi_center,Z20,+ Age and Gender,0,0,0.4242592603290568
+test2_multi_center,Z21,+ Age and Gender,0,0,0.378503404668493
+test2_multi_center,Z22,+ Age and Gender,0,0,0.428489701750534
+test2_multi_center,Z23,+ Age and Gender,0,1,0.5233643518731718
+test2_multi_center,Z24,+ Age and Gender,0,0,0.4319885326451897
+test2_multi_center,Z25,+ Age and Gender,0,0,0.36076166988805913
+test2_multi_center,Z26,+ Age and Gender,0,0,0.33279406900105796
+test2_multi_center,Z27,+ Age and Gender,1,1,0.6194087677941653
+test2_multi_center,Z29,+ Age and Gender,1,0,0.4933659733708669
+test2_multi_center,Z30,+ Age and Gender,0,0,0.40505427382914405
+test2_multi_center,Z31,+ Age and Gender,0,0,0.4689800534199212
+test2_multi_center,Z33,+ Age and Gender,0,0,0.45434284360688476
+test2_multi_center,Z34,+ Age and Gender,0,0,0.3544202177875479
+test2_multi_center,Z35,+ Age and Gender,0,0,0.44622817669172177
+test2_multi_center,Z36,+ Age and Gender,0,0,0.4002929620432729
+test2_multi_center,Z37,+ Age and Gender,0,0,0.4600859618547369
+test2_multi_center,Z38,+ Age and Gender,0,0,0.38935977105266123
+test2_multi_center,Z39,+ Age and Gender,0,0,0.4613060754606004
+test2_multi_center,Z40,+ Age and Gender,0,0,0.38322111113725094
+test2_multi_center,Z41,+ Age and Gender,0,0,0.40281083830519915
+test2_multi_center,Z42,+ Age and Gender,0,0,0.37200263033715253
+test2_multi_center,Z43,+ Age and Gender,0,0,0.3730800093240398
+test2_multi_center,Z44,+ Age and Gender,0,0,0.3880296598743073
+test2_multi_center,Z45,+ Age and Gender,1,0,0.4614698355401053
+test2_multi_center,Z46,+ Age and Gender,0,0,0.4141800603253702
+test2_multi_center,Z47,+ Age and Gender,0,0,0.3772587373555942
+test2_multi_center,Z48,+ Age and Gender,1,1,0.5203009508276863
+test2_multi_center,Z49,+ Age and Gender,0,0,0.36627345986262155
+test2_multi_center,Z50,+ Age and Gender,0,0,0.42157189603762774
+test2_multi_center,M1,+ Age and Gender,0,0,0.4223386032662217
+test2_multi_center,M2,+ Age and Gender,0,0,0.4056502900856511
+test2_multi_center,M4,+ Age and Gender,1,1,0.5242033419147516
+test2_multi_center,M5,+ Age and Gender,0,0,0.328074732971716
+test2_multi_center,M6,+ Age and Gender,0,1,0.5678416319562442
+test2_multi_center,M7,+ Age and Gender,0,0,0.4066751497215889
+test2_multi_center,M8,+ Age and Gender,0,1,0.538300549063931
+test2_multi_center,M9,+ Age and Gender,1,1,0.5234047880144455
+test2_multi_center,M10,+ Age and Gender,0,0,0.4063139230105518
+test2_multi_center,M11,+ Age and Gender,0,0,0.34801352827388843
+test2_multi_center,M12,+ Age and Gender,0,1,0.5904486028886161
+test2_multi_center,M13,+ Age and Gender,0,0,0.480307887377006
+test2_multi_center,M14,+ Age and Gender,0,1,0.5762504217739373
+test2_multi_center,M15,+ Age and Gender,0,0,0.4585343392086835
+test2_multi_center,M16,+ Age and Gender,0,0,0.4459801645977638
+test2_multi_center,M19,+ Age and Gender,0,0,0.37457007485443994
+test2_multi_center,M20,+ Age and Gender,0,1,0.5374401608006394
+test2_multi_center,M21,+ Age and Gender,0,1,0.5036621875713628
+test2_multi_center,M23,+ Age and Gender,0,1,0.5044336103154606
+test2_multi_center,M24,+ Age and Gender,0,0,0.3960281384391896
+test2_multi_center,M25,+ Age and Gender,0,0,0.4179719593099197
+test2_multi_center,M26,+ Age and Gender,0,0,0.4253641434765264
+test2_multi_center,M27,+ Age and Gender,0,0,0.36154805842112675
+test2_multi_center,M29,+ Age and Gender,1,0,0.4615401148036772
+test2_multi_center,M30,+ Age and Gender,1,0,0.40820232414521224
+test2_multi_center,M31,+ Age and Gender,0,1,0.5772126827920478
+test2_multi_center,M32,+ Age and Gender,0,1,0.5192952216479624
+test2_multi_center,M33,+ Age and Gender,1,1,0.6499575838050801
+test2_multi_center,M34,+ Age and Gender,0,0,0.37584953207754873
+test2_multi_center,M35,+ Age and Gender,1,1,0.5080317579193092
+test2_multi_center,M36,+ Age and Gender,1,1,0.506365763309503
+test2_multi_center,M38,+ Age and Gender,0,0,0.46236427686413045
+test2_multi_center,M39,+ Age and Gender,0,0,0.46150258306696135
+test2_multi_center,M40,+ Age and Gender,0,0,0.4256346774658159
+test2_multi_center,M41,+ Age and Gender,0,0,0.47556841008226597
+test2_multi_center,M44,+ Age and Gender,0,0,0.34613275691737866
+test2_multi_center,M45,+ Age and Gender,1,0,0.4893331222644352
+test2_multi_center,M46,+ Age and Gender,0,1,0.5379190217366508
+test2_multi_center,M47,+ Age and Gender,0,0,0.4263329124051956
+test2_multi_center,M48,+ Age and Gender,0,0,0.4769866163433937
+test2_multi_center,M49,+ Age and Gender,1,0,0.4575223775320911
+test2_multi_center,M50,+ Age and Gender,0,0,0.4211984639196173
+test2_multi_center,M51,+ Age and Gender,0,0,0.47241013197039794
+test2_multi_center,M52,+ Age and Gender,1,1,0.6338262480595802
+test2_multi_center,M53,+ Age and Gender,0,0,0.47368846619888977
+test2_multi_center,M54,+ Age and Gender,0,1,0.5345632504105594
+test2_multi_center,M55,+ Age and Gender,0,0,0.4907995609855674
+test2_multi_center,W1,+ Age and Gender,0,0,0.4401792532502505
+test2_multi_center,W2,+ Age and Gender,0,0,0.43711892681780345
+test2_multi_center,W3,+ Age and Gender,0,0,0.4479566455558043
+test2_multi_center,W4,+ Age and Gender,1,0,0.411744990158902
+test2_multi_center,W6,+ Age and Gender,0,0,0.4256706455287527
+test2_multi_center,W8,+ Age and Gender,0,1,0.5198646736780121
+test2_multi_center,W9,+ Age and Gender,0,0,0.4780282054118523
+test2_multi_center,W11,+ Age and Gender,0,0,0.41755231829961004
