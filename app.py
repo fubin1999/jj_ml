@@ -11,7 +11,7 @@ YOUDEN_CUTOFF = 0.373
 st.set_page_config(page_title="GlycaPep-PD CVD Risk Calculator", page_icon="🫀")
 
 st.title("GlycaPep-PD CVD Risk Calculator")
-st.subheader(
+st.write(
     "1-Year CVD Risk Calculator for PD Patients Integrating Clinical "
     "Indicators and Glycated Peptide Biomarkers"
 )
@@ -35,6 +35,7 @@ st.latex(
 )
 st.caption("Diabetes: No = 0; Yes = 1. Coefficients are rounded for display.")
 
+st.markdown("#### Calculator")
 with st.form("risk_calculator"):
     clinical, peptides = st.columns(2)
     with clinical:
