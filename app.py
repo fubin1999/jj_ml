@@ -118,6 +118,25 @@ if submitted:
             "not a clinical risk category."
         )
 
+st.markdown("#### Model formula")
+st.latex(r"p = \frac{1}{1 + e^{-\eta}}")
+st.latex(
+    r"""
+    \begin{aligned}
+    \eta ={}& 4.540128
+    - 0.999037(\mathrm{T\ Kt/v})
+    + 0.773180(\mathrm{Diabetes}) \\
+    &+ 4.856619(\mathrm{cTnT})
+    + 0.052606(\mathrm{GA})
+    - 0.067553(\mathrm{ALB}) \\
+    &- 1.271284(\mathrm{P})
+    + 0.000176316(\mathrm{A2MG})
+    + 0.057099(\mathrm{APOB}).
+    \end{aligned}
+    """
+)
+st.caption("Diabetes: No = 0; Yes = 1. Coefficients are rounded for display.")
+
 st.caption(
     "Research use only. This model output has not been established as a "
     "calibrated absolute clinical risk; it should not be used alone for care decisions."
