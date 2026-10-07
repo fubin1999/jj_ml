@@ -171,19 +171,18 @@ if submitted:
         probability = predict_probability(values)
         classification = "Likely" if probability >= YOUDEN_CUTOFF else "Unlikely"
         with st.container(key="result_panel"):
-            result_value, result_label = st.columns([2, 1])
-            with result_value:
-                st.metric(
-                    "Model-predicted probability of Endpoint = 1",
-                    f"{probability:.1%}",
-                )
-            with result_label:
-                badge_class = "likely" if classification == "Likely" else "unlikely"
-                st.markdown(
-                    f'<span class="result-badge {badge_class}">{classification}</span>'
-                    '<p class="result-cutoff">37.3% Youden cutoff</p>',
-                    unsafe_allow_html=True,
-                )
+            st.metric(
+                "Model-predicted probability of Endpoint = 1",
+                f"{probability:.1%}",
+            )
+            badge_class = "likely" if classification == "Likely" else "unlikely"
+            st.markdown(
+                '<div class="result-interpretation">'
+                f'<span class="result-badge {badge_class}">{classification}</span>'
+                '<span class="result-cutoff">37.3% Youden cutoff</span>'
+                '</div>',
+                unsafe_allow_html=True,
+            )
             st.caption(
                 f"Unrounded model probability: {probability:.6f}. "
                 "The word follows the 37.3% Youden cutoff, "

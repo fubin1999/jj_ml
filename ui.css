@@ -46,7 +46,11 @@ h5 { color: var(--ink); font-size: 15px !important; font-weight: 650 !important;
 .peptide-notes code { color: #365955; background: #f0f5f3; font-size: 10px; overflow-wrap: anywhere; }
 .st-key-result_panel { background: white; border: 1px solid #bdd7d0; border-radius: 14px; padding: 1.4rem; }
 .st-key-result_panel [data-testid="stMetricValue"] { color: var(--accent); font-size: 42px; font-weight: 600; letter-spacing: -.04em; }
-.result-badge { display: inline-block; padding: .4rem .75rem; margin: .7rem 0; border-radius: 30px; font-size: 13px; font-weight: 650; background: #edf5f2; color: #136e65; }
+.st-key-result_panel[data-testid="stVerticalBlock"] { gap: .75rem; }
+.result-interpretation { display: flex; align-items: center; flex-wrap: wrap; gap: .75rem; }
+.st-key-result_panel [data-testid="stMarkdownContainer"]:has(> .result-interpretation) { margin-bottom: 0; }
+.st-key-result_panel [data-testid="stCaptionContainer"] { border-top: 1px solid var(--line); padding-top: .8rem; }
+.result-badge { display: inline-block; padding: .4rem .75rem; margin: 0; border-radius: 30px; font-size: 13px; font-weight: 650; background: #edf5f2; color: #136e65; }
 .result-badge.likely { background: #fcf1df; color: #8c5b16; }
 .result-cutoff { font-size: 12px; color: var(--muted); margin: 0; }
 .st-key-research_footer { border-top: 1px solid var(--line); padding-top: 1rem; margin-top: .7rem; }
