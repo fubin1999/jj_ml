@@ -26,7 +26,12 @@ h5 { color: var(--ink); font-size: 15px !important; font-weight: 650 !important;
 .st-key-formula_panel .katex { font-size: .98em; }
 .st-key-formula_panel [data-testid="stCaptionContainer"] { color: var(--muted); font-size: 11px; }
 [data-testid="stForm"] { border: 0; padding: 0; background: transparent; }
-.st-key-clinical_panel, .st-key-peptide_panel { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 1.25rem; height: 100%; }
+.st-key-clinical_panel, .st-key-peptide_panel { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 1.25rem 1.25rem 1.5rem; height: 100%; }
+/* Stretch each card wrapper to the height of the shared column row. */
+[data-testid="stLayoutWrapper"]:has(> .st-key-clinical_panel),
+[data-testid="stLayoutWrapper"]:has(> .st-key-peptide_panel) { flex: 1 1 auto; }
+/* Streamlit's paragraph margin compensation clips custom HTML at the bottom. */
+.st-key-peptide_panel [data-testid="stMarkdownContainer"]:has(> .peptide-notes) { margin-bottom: 0; }
 .panel-kicker { color: var(--muted); font-size: 10px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .2rem; }
 [data-testid="stWidgetLabel"] p { color: #365053; font-size: 12px; font-weight: 550; }
 [data-testid="stNumberInputContainer"], [data-baseweb="select"] > div { background: #f8faf9 !important; border-color: #dce7e5 !important; border-radius: 8px !important; }
@@ -53,7 +58,7 @@ h5 { color: var(--ink); font-size: 15px !important; font-weight: 650 !important;
   .hero .intro { font-size: 13px; }
   .st-key-formula_panel { padding: .9rem; }
   .st-key-formula_panel .katex { font-size: .68em; }
-  .st-key-clinical_panel, .st-key-peptide_panel { padding: 1rem; }
+  .st-key-clinical_panel, .st-key-peptide_panel { padding: 1rem 1rem 1.5rem; }
   [data-testid="stFormSubmitButton"] button { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
