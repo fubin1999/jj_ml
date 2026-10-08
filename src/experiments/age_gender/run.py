@@ -1,7 +1,7 @@
 """Compare the published all-features model with a forced Age + Gender variant.
 
 Run from the repository root with the Python environment used for modeling.ipynb:
-    python experiments/age_gender/run.py
+    python src/experiments/age_gender/run.py
 """
 
 from pathlib import Path
@@ -26,8 +26,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn import set_config
 
 
-ROOT = Path(__file__).resolve().parents[2]
-OUT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[3]
+OUT = ROOT / "results/experiments/age_gender"
 PEPTIDES = ["A2MG", "APOB"]
 DEMOGRAPHICS = ["Age", "Gender"]
 set_config(transform_output="pandas")
@@ -74,12 +74,12 @@ def metrics(y, pred, prob):
 
 
 def main():
-    train = pd.read_csv(ROOT / "data/train.csv", index_col=0)
+    train = pd.read_csv(ROOT / "results/data/train.csv", index_col=0)
     x_train = train.drop(columns="Endpoint")
     y_train = train["Endpoint"]
     tests = {
-        "test1_single_center": pd.read_csv(ROOT / "data/test1.csv", index_col=0),
-        "test2_multi_center": pd.read_csv(ROOT / "data/test2.csv", index_col=0),
+        "test1_single_center": pd.read_csv(ROOT / "results/data/test1.csv", index_col=0),
+        "test2_multi_center": pd.read_csv(ROOT / "results/data/test2.csv", index_col=0),
     }
     for name, data in [("train", train), *tests.items()]:
         if data[DEMOGRAPHICS].isna().any().any():

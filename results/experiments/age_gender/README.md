@@ -1,6 +1,6 @@
 # 年龄与性别增量实验
 
-此实验独立于 `notebook/modeling.ipynb` 和主模型结果。使用原训练集（n=168）拟合原来的 **All Features** 模型，并在同一模型流程中额外强制加入 `Age`、`Gender`。六个临床变量仍由训练集中的 `SelectKBest(f_classif, k=6)` 选择，两个肽变量 `A2MG`、`APOB` 保留；年龄和性别不占六个临床变量名额。其余均沿用原流程：均值填补、标准化、带类别平衡的 `LogisticRegressionCV`。两个模型在全训练集上选出的六个临床变量均为 `T Kt/v`、`Diabetes`、`cTnT`、`GA`、`ALB`、`P`。
+此实验独立于 `src/modeling.ipynb` 和主模型结果。使用原训练集（n=168）拟合原来的 **All Features** 模型，并在同一模型流程中额外强制加入 `Age`、`Gender`。六个临床变量仍由训练集中的 `SelectKBest(f_classif, k=6)` 选择，两个肽变量 `A2MG`、`APOB` 保留；年龄和性别不占六个临床变量名额。其余均沿用原流程：均值填补、标准化、带类别平衡的 `LogisticRegressionCV`。两个模型在全训练集上选出的六个临床变量均为 `T Kt/v`、`Diabetes`、`cTnT`、`GA`、`ALB`、`P`。
 
 `Age` 为连续年龄，`Gender` 为原数据中的 0/1 编码。三个数据集的这两列均无缺失。原模型重算的预测与 `results/data/result_test1.csv`、`result_test2.csv` 中的 **All Features** 预测逐例一致（概率容差 1e-7）。
 
@@ -20,13 +20,15 @@
 从仓库根目录，使用已有的 `ml` Python 环境运行：
 
 ```bash
-/Users/fubin/miniforge3/envs/ml/bin/python experiments/age_gender/run.py
+/Users/fubin/miniforge3/envs/ml/bin/python src/experiments/age_gender/run.py
 ```
 
-- `run.py`：独立实验代码及原结果一致性检查。
+- `src/experiments/age_gender/run.py`：独立实验代码及原结果一致性检查。
+以下结果文件均位于 `results/experiments/age_gender/`。
+
 - `predictions.csv`：两个测试集逐例预测。
 - `metrics.csv`：两种模型的各项指标。
 - `delta.csv`：增量模型减原模型的指标差。
 - `selected_clinical_features.csv`：训练集选出的临床变量。
-- `plot_roc.py`：根据逐例预测绘制两个留出测试集的 ROC 曲线；运行 `python experiments/age_gender/plot_roc.py`。
+- `src/experiments/age_gender/plot_roc.py`：根据逐例预测绘制两个留出测试集的 ROC 曲线；运行 `python src/experiments/age_gender/plot_roc.py`。
 - `roc_comparison.pdf`、`roc_comparison.png`：原模型与加入年龄、性别模型的 ROC 对比图。

@@ -10,7 +10,8 @@ import pandas as pd
 from sklearn.metrics import roc_auc_score, roc_curve
 
 
-HERE = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[3]
+HERE = ROOT / "results/experiments/age_gender"
 COHORTS = [
     ("test1_single_center", "Single-center test (n=72, events=16)"),
     ("test2_multi_center", "Multi-center test (n=102, events=17)"),

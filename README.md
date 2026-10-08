@@ -1,42 +1,47 @@
-# GlycaPep-PD CVD Risk Calculator
+# GlycaPep-PD 心血管风险分析
 
-Streamlit interface for the **All Features** logistic regression model in
-`notebook/modeling.ipynb`. It takes the six selected clinical indicators and
-two glycated peptide biomarkers as raw measurements and displays the model's
-predicted probability for `Endpoint = 1`. The adjacent **Unlikely / Likely**
-label follows the 37.3% Youden cutoff, not a validated
-clinical risk category.
+## 项目结构
 
-## Run locally
+- `src/`：全部分析代码，包括 Jupyter notebooks、R 脚本、Quarto 文档和独立实验。
+- `data/`：原始输入数据（Excel 文件及 `mono.csv`、`multi.csv`、`cvrisk.csv`），不写入清洗数据或分析结果。
+- `results/data/`：清洗后数据、训练/测试集、预测结果和模型比较表。
+- `results/figures/`：主分析图表。
+- `results/experiments/age_gender/`：年龄与性别增量实验结果及说明。
+- `results/reports/`：Quarto 渲染的报告。
+- `renv/`、`renv.lock`：R 环境依赖；`requirements.txt`：Python 分析依赖。
+
+## 运行分析
+
+安装 Python 依赖：
 
 ```bash
 python -m pip install -r requirements.txt
-streamlit run app.py
 ```
 
-All eight fields are required in the interface. Use the same measurement scale
-and definitions as `data/train.csv`; `Diabetes` is coded No = 0, Yes = 1.
-The frozen model coefficients and training means are in `risk_model.py`.
-The original modeling pipeline's mean imputation remains available in
-`predict_probability()` for programmatic callers passing `None`.
+Jupyter notebooks 的工作目录为 `src/`：
 
-## Input units
+```bash
+cd src
+jupyter lab
+```
 
-| Input | Unit shown in the app |
-|---|---|
-| T Kt/v | Unitless |
-| Diabetes | Yes / No (0 / 1) |
-| cTnT | ng/mL |
-| GA | % |
-| ALB | g/L |
-| P | mmol/L |
-| A2MG, APOB | pg/µL |
+先运行 `clean.ipynb`，将原始输入清洗并划分为 `results/data/train.csv`、`test1.csv`、`test2.csv`；其余 notebooks 从该目录读取数据，并将输出保存到 `results/`。
 
-A2MG refers to glycated peptide GEAFTLK(g)ATVLNYLPK from
-alpha-2-macroglobulin. APOB refers to glycated peptide K(g)QHLFVK from
-apolipoprotein B-100. Use peptide assay outputs, not routine serum protein
-concentrations.
+R 脚本从项目根目录运行。需要启用已有的 renv 环境时，先在 R 中运行 `source("src/activate.R")`，再运行 `source("src/diagnosis.R")` 或 `source("src/cvrist.R")`。
 
-The displayed number is the original model's probability output, not a
-clinically calibrated absolute risk estimate. The interface is for research
-use and should not be used alone for care decisions.
+从项目根目录渲染 Quarto 报告，报告保存到 `results/reports/`：
+
+```bash
+quarto render
+```
+
+年龄与性别增量实验：
+
+```bash
+python src/experiments/age_gender/run.py
+python src/experiments/age_gender/plot_roc.py
+```
+
+实验会读取 `results/data/` 中的训练/测试集，输出保存到 `results/experiments/age_gender/`。详细结果见该目录的 README。
+
+原始数据和主分析结果沿用本地文件，不纳入版本控制。

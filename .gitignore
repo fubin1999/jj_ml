@@ -3,5 +3,7 @@ data
 renv
 results
 .Rhistory
-.Rprofile
 __pycache__/
+.DS_Store
+.ipynb_checkpoints/
+.quarto/
